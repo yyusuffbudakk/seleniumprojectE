@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class T7_newTask2 {
+public class T6_practice {
 
     public static void main(String[] args) {
 
