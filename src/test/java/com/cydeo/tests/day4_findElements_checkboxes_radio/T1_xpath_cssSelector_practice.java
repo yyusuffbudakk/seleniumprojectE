@@ -14,30 +14,36 @@ public class T1_xpath_cssSelector_practice {
 
         driver.get("https://practice.cydeo.com/forgot_password");
 
-        WebElement homeLink = driver.findElement(By.cssSelector("a[class='nav-link']"));
-        String homeLlink = homeLink.getText();
+        WebElement homeLink1 = driver.findElement(By.cssSelector("a[class='nav-link']"));
 
-        WebElement forgotPasswordHeader = driver.findElement(By.cssSelector("div>h2[='Forgot Password']"));
-        String forgotPass = forgotPasswordHeader.getText();
+        WebElement homelink3 = driver.findElement(By.cssSelector("a[href='/']"));
 
-        WebElement eMailText = driver.findElement(By.cssSelector("label[for='email']"));
-        String eMail = eMailText.getText();
+        //syntax #2
+        WebElement homelink2 = driver.findElement(By.cssSelector("a.nav-link"));
 
-        WebElement eMailInputBox = driver.findElement(By.cssSelector("input[type='text']"));
-        String eMailInput = eMailInputBox.getText();
+        WebElement header1 = driver.findElement(By.cssSelector("div.example > h2"));
 
-        WebElement retrievePassword = driver.findElement(By.cssSelector("i[class='icon-2x icon-signin']"));
-        String retrievePass = retrievePassword.getText();
+        WebElement header2 = driver.findElement(By.xpath("//h2[text()='Forgot Password']"));
+        //WebElement header2 = driver.findElement(By.xpath("//h2[.()='Forgot Password']")); // . == class
 
-        WebElement poweredByCydeoText = driver.findElement(By.cssSelector("div[style='text-align: center;']"));
-        String poweredByCydeo = poweredByCydeoText.getText();
+        WebElement emailLabel = driver.findElement(By.xpath("//label[@for ='email']"));
 
-        System.out.println("forgotPass = " + forgotPass);
-        System.out.println("eMail = " + eMail);
-        System.out.println("eMailInput = " + eMailInput);
-        System.out.println("retrievePass = " + retrievePass);
-        System.out.println("poweredByCydeo = " + poweredByCydeo);
+        WebElement emailInputBox = driver.findElement(By.xpath("//input[@name ='email']"));
 
+        WebElement emailInputBox2 = driver.findElement(By.xpath("//input[contains(@pattern,'a-z')]"));
+
+        //button[@class='radius']
+        WebElement retrievePassword2 = driver.findElement(By.xpath("//button[@id='form_submit']"));
+
+        WebElement poweredByCydeoText = driver.findElement(By.xpath("//div[@style='text-align: center;']"));
+
+
+        System.out.println("homeLink1.isDisplayed() = " + homeLink1.isDisplayed());
+        System.out.println("header1.isDisplayed() = " + header1.isDisplayed());
+        System.out.println("emailLabel.isDisplayed() = " + emailLabel.isDisplayed());
+        System.out.println("emailInputBox.isDisplayed() = " + emailInputBox.isDisplayed());
+        System.out.println("retrievePassword2.isDisplayed() = " + retrievePassword2.isDisplayed());
+        System.out.println("poweredByCydeoText.isDisplayed() = " + poweredByCydeoText.isDisplayed());
 
 
     }
