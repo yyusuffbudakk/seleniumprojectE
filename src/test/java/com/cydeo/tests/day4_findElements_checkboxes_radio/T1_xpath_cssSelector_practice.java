@@ -1,4 +1,4 @@
-package com.cydeo.tests.day4_findElements_cjheckboxes_radio;
+package com.cydeo.tests.day4_findElements_checkboxes_radio;
 
 import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
@@ -37,6 +37,7 @@ public class T1_xpath_cssSelector_practice {
         System.out.println("eMailInput = " + eMailInput);
         System.out.println("retrievePass = " + retrievePass);
         System.out.println("poweredByCydeo = " + poweredByCydeo);
+
 
 
     }
