@@ -1,4 +1,4 @@
-package com.cydeo.tests.day5_testNG_intro_dropdowns;
+package com.cydeo.tests.day5_testNG_Intro_dropdowns;
 
 import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
