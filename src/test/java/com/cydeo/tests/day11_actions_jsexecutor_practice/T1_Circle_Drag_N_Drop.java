@@ -10,9 +10,11 @@ import org.testng.annotations.Test;
 public class T1_Circle_Drag_N_Drop {
 
     @Test
-    public void drag_and_drop_test() {
+    public void drag_and_drop_test() throws InterruptedException {
         //1. Go to https://demos.telerik.com/kendo-ui/dragdrop/index
         Driver.getDriver().get("https://demos.telerik.com/kendo-ui/dragdrop/index");
+
+        Thread.sleep(3000);
 
         //Locate "Accept Cookies" button and click
         WebElement acceptCookiesButton = Driver.getDriver().findElement(By.id("onetrust-accept-btn-handler"));
@@ -24,6 +26,8 @@ public class T1_Circle_Drag_N_Drop {
 
         //2. Drag and drop the small circle to bigger circle.
         Actions actions = new Actions(Driver.getDriver());
+
+        Thread.sleep(3000);
         //actions.dragAndDrop(smallCircle, bigCircle).perform();
         actions.clickAndHold(smallCircle)
                 .pause(2000)
